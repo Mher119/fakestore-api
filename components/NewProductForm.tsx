@@ -23,12 +23,12 @@ export default function NewProductForm(){
         e.preventDefault();
 
         // возвращающая не сам Action, а прямо его payload
-        const d = await dispatch(createProduct({...product, price: parseFloat(product.price)})).unwrap();
+        // const d = await dispatch(createProduct({...product, price: parseFloat(product.price)})).unwrap();
         
         router.push('/products')
     }
 
-    const changeHanlder = (e: any)=>{
+    const changeHanlder = (e: React.ChangeEvent<HTMLInputElement>)=>{
          //e.target.value e.target.name
          setProduct({...product, [e.target.name]: e.target.value});
     }
