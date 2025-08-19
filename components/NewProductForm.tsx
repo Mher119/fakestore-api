@@ -1,7 +1,5 @@
 'use client';
 import { useState } from "react";
-import { createProduct } from "@/store/productsSlice";
-import { useAppDispatch } from "@/store/hooks";
 import { useRouter } from "next/navigation";
 
 
@@ -9,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 export default function NewProductForm(){
     const router = useRouter();
-    const dispatch = useAppDispatch();
+    
     const [product, setProduct] = useState({
         title: '',
         price: '',	
