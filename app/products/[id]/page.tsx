@@ -1,6 +1,5 @@
 import { ProductDetail } from "@/components/ProductDetail";
 
-
 type Params = {
     params: Promise<{id: string}>
 }
